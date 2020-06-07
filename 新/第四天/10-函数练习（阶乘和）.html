@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    //求一个数字的阶乘
+    function getFactorial(num){
+      var result=1;
+      for(var i=1;i<=num;i++){
+        result*=i;
+      }
+      return result;
+     }
+
+    //求一个数字的阶乘和 5   5的阶乘+4的阶乘+3的阶乘+2的阶乘+1的阶乘
+    function getFactorialSum(num){
+      var sum=0;  //和
+      for(var i=1;i<=num;i++){
+        sum+=getFactorial(i);
+      }
+      return sum;
+    }
+    console.log(getFactorialSum(5));
+    
+    //函数内部可以调用其他函数
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //求两个数字的差
+    function getSub(x, y) {
+      return x - y;
+    }
+    console.log(getSub(10, 20));
+
+    //求一组数字中的最大值
+    function getArrayMax(array) {
+      //定义变量,假设这个变量中存储的是最大值
+      var max = array[0];
+      for (var i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+          max = array[i];
+        }
+      }
+      return max;
+    }
+    console.log(getArrayMax([10,20,30,40,50]));
+    
+    // var max=getArrayMax([10,20,30,40,50]);//可以直接把数组传到函数中的
+    // console.log(max);
+
+    // var arr=[10,20,30,40,50];
+    // var max=getArrayMax(arr);
+    // console.log(max);
+    
+    //求一组数字中的最小值
+    function getArrayMin(array){
+      var min=array[0];
+      for(var i=0;i<array.length;i++){
+        if(min>array[i]){
+          min=array[i];
+        }
+      }
+      return min;
+    }
+    console.log(getArrayMin([10,20,30,40,50]));
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

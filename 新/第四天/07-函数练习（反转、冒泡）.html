@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //通过函数实现数组反转
+    function reverseArray(array) {
+      for (var i = 0; i < array.length / 2; i++) {
+        var temp = array[i];
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = temp;
+      }
+      return array;
+    }
+    console.log(reverseArray([1, 2, 3, 4, 5]));
+
+    //通过函数实现冒泡排序
+    function sortArray(arr) {
+      //循环控制比较的轮数
+      for (var i = 0; i < arr.length - 1; i++) {
+        //此时只是比较了一次---如果想要比较多次----for循环
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1]; i
+            arr[j + 1] = temp;
+          }//end if 
+        }//end for
+      }//end for
+      return arr;
+    }
+    console.log(sortArray([1, 5, 10, 50, 100, 6, 9]));
+
+   
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

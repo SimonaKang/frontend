@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // var a = 25;
+    // function abc() {
+    //   alert(a);//undefined
+    //   var a = 10;
+    // }
+    // abc();
+    // //如果变量和函数同名的话，函数优先
+    // console.log(a);//25
+
+    // console.log(a);//a代码
+    // function a() {
+    //   console.log("aaaa");
+    // }
+    // var a = 1;
+    // console.log(a);//1
+
+    // var a = 18;
+    // f1();
+    // function f1() {
+    //   var b = 9;
+    //   console.log(a);//undefined
+    //   console.log(b);//9
+    //   var a = "123";
+    // }
+
+    f1();
+    console.log(c);//9
+    console.log(b);//9
+    console.log(a);//报错
+    function f1() {
+      var a = b = c = 9;
+      console.log(a);//9
+      console.log(b);//9
+      console.log(c);//9
+    }
+
+    //解析
+    function f1() {
+      var a;//局部变量
+      //a=b=c=9;
+      a=9;
+      //隐式全局变量
+      b=9;
+      c=9;
+      //var a = b = c = 9;
+      console.log(a);//9
+      console.log(b);//9
+      console.log(c);//9
+    }
+    f1();
+    console.log(c);//9
+    console.log(b);//9
+    console.log(a);//报错
+
+   // console.log(parseInt(Math.random()*57+1));
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

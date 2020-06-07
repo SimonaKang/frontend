@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //求两个数的和：获取任意的两个数字的和
+    function getSum(x, y) {
+      return x + y;
+    }
+    console.log(getSum(10, 20));
+
+    //求1-100之间所有数的和
+    function getEverySum() {
+      var sum = 0;
+      for (var i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    console.log(getEverySum());
+
+
+    //求1-n之间所有数的和
+    function getEverySum1(n) {
+      var sum = 0;
+      for (var i = 1; i <= n; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    console.log(getEverySum1(10));
+
+    //求n-m之间所有数的和
+    function getEverySum2(n, m) {
+      var sum = 0;
+      for (var i = n; i <= m; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    console.log(getEverySum2(1, 100));
+    //圆的面积
+    function getS(r) {
+      return Math.PI * r * r;
+    }
+    console.log(getS(2));
+
+    
+
+
+    // function f1(){
+    //   console.log("肯尼齐瓦");
+    //   return 100;
+    // }
+    // //var result=f1();
+    // //console.log(result);
+    // //f1函数调用，把函数的返回值输出了
+    // console.log(f1());
+
+    // function f1(){
+    //   console.log("肯尼齐瓦");
+    //   return 100;
+    // }
+    // console.log(f1);//输出的是f1函数名字-----是f1函数的代码
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

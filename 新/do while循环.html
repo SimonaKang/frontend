@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //问用户：您觉得我帅吗？提示用户请输入y/n，如果n就一直问，我帅不帅，如果用户输入的是y，则结束，并提示用户，您真有眼光
+   /*  do{
+      //把用户输入的结果存储到result变量中
+      var result=prompt("您觉得我帅吗?y/n");
+    }while(result!="y");
+    console.log("您真有眼光"); */
+
+    //求100以内所有3的倍数的和
+    /* var i=1;
+    var sum=0;
+    while(i<=100){
+      if(i%3==0){
+        sum+=i;
+      }
+      i++;
+    }
+    console.log("和为:"+sum); */
+
+    var i=1;
+    var sum=0;
+    do{
+      if(i%3==0){
+        sum+=i;
+      }
+      i++;
+    }while(i<=100);
+    console.log("和为:"+sum);
+    
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

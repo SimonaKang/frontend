@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/* 
+    for(var i=1;i<=10;i++){
+      console.log(i);
+    } */
+
+//死循环
+  /*  for(;;){
+     alert(1);
+   } */
+
+   //1， 打印1到100
+   /* for(var i=1;i<=100;i++){
+     console.log(i); 
+   } */
+
+   //2, 打印1到100的和
+   /* for(var i=1,sum=0;i>=1 && i<=100;i++){
+    // sum=sum+i;
+    sum += i
+   }
+   alert(sum); */
+
+   //3, 求1-100之间所有数的和、平均值
+   /*  var sum=0;
+    var avg=0;
+    for(var i=1;i>=1 && i<=100;i++){
+     sum=sum+i;
+   }
+   alert(sum);
+   //alert(avg=sum/100); 
+   alert(avg=sum/(i-1))
+   */
+
+   //4, 求1-100之间所有偶数的和、所有奇数的和
+    /* var sumeven=0;  //偶数和
+    var sumodd=0;   //奇数和
+    for(var i=1;i>=1 && i<=100;i++){
+     if(i%2===0){
+       sumeven += i;
+     }else{
+       sumodd += i
+     }
+   }
+   alert(sumeven);
+   alert(sumodd);
+ */
+
+   //5 本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+  /*  var money=10000;
+      var rote=0.003;
+    for(var i=1;i<=5;i++){
+     // money=money+money*0.003;
+     money *= 1+rote
+    }
+    alert(money); */
+
+
+    //6, 有个人想知道，一年之内一对兔子能繁殖多少对？于是就筑了一道围墙把一对兔子关在里面。已知一对兔子每个月可以生一对小兔子，而一对兔子从出生后第3个月起每月生一对小兔子。假如一年内没有发生死亡现象，那么，一对兔子一年内（12个月）能繁殖成多少对？ 
+    //兔子的规律为数列，1，1，2，3，5，8，13，21 
+
+    //斐波那契数列：1，1，2，3，5，8，13，21 ，34, 55, 89, 144....
+
+
+    //需求：求斐波那契数列第12项是多少？
+    //步骤：
+    //思路：设置两个变量，分别代表第一个和第二个数值，然后从第三项开始，当前项等于前两项之和。在赋值之前，先把后一项保存起来，赋值完毕再把保存值赋值给第一项
+    //1，定义两个变量和一个中间值
+    //2，然后利用循环交换变量和以及变量
+    //3，直接打印n2
+    //4，
+     
+
+     //1，定义两个变量和一个中间值
+     var num1=1;
+     var num2=1;
+     var temp=0;
+    //2，然后利用循环交换变量和以及变量(循环次数=从第三项开始循环，到第12项结束)
+    for(var i=3;i<=12;i++){
+      temp=num2;
+      num2=num1+num2;
+      num1=temp;
+    }
+    //3，直接打印n2
+    console.log(num2);
+    /* 
+     var n1=1;
+     var n2=1;
+     var t=0;
+     for(var i=1;i<=12;i++){
+       n2=n1+n2;
+       t=n2;
+       n2=n1;
+       n1=t;
+       console.log(n2);
+     } */
+     
+    
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    /* var str = prompt("请输入一个数字");
+    //用户没有输入内容
+    if (str == "") {
+      console.log("您输入有误");
+    } else {
+      //用户输入了内容
+      if (!isNaN(parseInt(str))) {
+        console.log("用户输入的是一个数字");
+        //调用一个函数，把这个数字传入到函数中，判断该数字是不是质数
+      } else {
+        console.log("用户输入的不是一个数字");
+      }
+    } */
+  </script>
+
+  <script>
+    //如何判断一个数字是质数
+    var num=4;
+    function isPrimeNumber(num){
+      for(var i=2;i<=num/2;i++){
+        if(num%i==0){
+          return false;
+        }
+      }
+      return true;
+    }
+    console.log(isPrimeNumber(num));
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

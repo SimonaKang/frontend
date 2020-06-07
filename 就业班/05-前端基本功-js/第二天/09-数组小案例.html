@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //把1-100之间所有的奇数，放到数组中
+   //有问题，索引值不是挨着的，而且不是从0开始
+   //数组长度本身开始的时候是0，紧接着每添加进去一个值，数组长度自增1
+   //新的变量j可以用arr.length替代，因为初始化值也是0每添加一个元素也是自增1
+    var arr1 = [];
+    for(var i=1;i<=100;i++){
+      if(i%2!==0){
+        arr1[arr1.length]=i;
+      }
+    }
+    console.log(arr1); 
+
+    //重新定义一个变量作为数组的索引值使用
+   /*  var arr1 = [];
+    var j=0;
+    for(var i=1;i<=100;i++){
+      if(i%2!==0){
+        arr1[j]=i;
+        j++;
+      }
+    }
+    console.log(arr1); */
+    
+
+  //1-100之间能被3整数的数字，存到数组中
+
+ /*  var arr1 = [];
+    var j=0;
+    for(var i=1;i<=100;i++){
+      if(i%3===0){
+        arr1[j]=i;
+        j++;
+      }
+    }
+    console.log(arr1); */
+
+    var arr1 = [];
+    for(var i=1;i<=100;i++){
+      if(i%3===0){
+        arr1[arr1.length]=i;
+      }
+    }
+    console.log(arr1); 
+
+  </script>
+</body>
+</html>

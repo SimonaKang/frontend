@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    f1();//----不能调用
+    var f1=function (){
+      console.log(a);
+      var a=10;
+    }
+
+    //解析
+    var f1;//f1是一个变量
+    f1();//----不能调用   报错
+    f1=function (){
+      console.log(a);
+      var a=10;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

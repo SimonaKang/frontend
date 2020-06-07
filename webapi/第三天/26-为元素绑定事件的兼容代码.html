@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="按钮" id="btn"/>
+  <script src="common.js"></script>
+  <script>
+
+    //为任意元素绑定任意的事件，  任意的函数，事件的类型，事件处理函数
+    function addEventListener(elenment,type,fn){
+      //判断浏览器是否支持这个方法
+      if(elenment.addEventListener){
+        elenment.addEventListener(type,fn,false);
+      }else if(elenment.attachEvent){
+        elenment.attachEvent("on"+type,fn);
+      }else{
+        elenment["on"+type]=fn;
+      }
+    }
+
+    addEventListener(my$("btn"),"click",function (){
+      console.log("o1");
+    });
+    addEventListener(my$("btn"),"click",function (){
+      console.log("o2");
+    });
+    addEventListener(my$("btn"),"click",function (){
+      console.log("o3");
+    });
+
+    // function Person(name){
+    //   this.name=name;
+    //   this.sayHi=function (){
+    //     console.log("您好");
+    //   };
+    // }
+
+    // var per=new Person("小明");
+    // if(per.sayHi){//判断这个对象中有没有这个方法
+    //   per.sayHi();
+    // }else{
+    //   console.log("没有这个方法");
+    // }
+   
+
+    // 对象.sayHi();  //方法
+    // sayHello();    //函数
+  </script>
+</body>
+</html>

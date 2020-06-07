@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+  /*background-repeat背景平铺: repeat默认平铺/ no-repeat不平铺/ repeat-x水平方向平铺/ repeat-y纵向平铺*/
+  /*background-position背景定位: left/ right/ center/ top/ bottom 
+  注意：1，方位值只写一个的时候，另外一个值默认居中  2，写2个方位词的时候，顺序没有要求
+  3，写2个具体值的时候，第一个值代表水平方向，第二个值代表垂直方向 */
+  /*background-attachment背景是否滚动：scroll滚动 / fixed不滚动*/
+  .box{
+    width: 400px;
+    height: 500px;
+    /*background-color: #999;
+    background-image: url("3.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;*/
+    /*背景属性连写；url为必写，顺序没有要求*/
+    background: red url("2.jpg") no-repeat 30px 40px scroll;
+  }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

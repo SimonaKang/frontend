@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a id="ak" href="images/pic4.jpg"><img src="images/slider.jpg" alt="" id="im"></a>
+  <script>
+    var aObj=document.getElementById("im");
+    aObj.onclick=function (){
+      this.src=document.getElementById("ak").href;
+      return false;
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+  /*嵌套的盒子，直接给子盒子设置垂直方向外边距的时候，会发生外边距塌陷。
+  解决方法:  1  给父盒子设置边框
+           2给父盒子overflow:hidden;   bfc   格式化上下文*/
+  .father{
+    width: 500px;
+    height: 400px;
+    background: #232323;
+    /*border: 1px solid  #232323;*/
+    overflow: hidden;
+  }
+  .son{
+    width: 200px;
+    height: 200px;
+    background: #eee;
+    margin-top:30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>

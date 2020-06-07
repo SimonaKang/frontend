@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    div{
+      width: 200px;
+      height: 100px;
+      background-color: red;
+    }
+  </style> -->
+</head>
+<body>
+  <input type="button" value="设置样式" id="btn"/>
+  <div id="dv" style="width: 200px;height: 100px;background-color: red;"></div>
+  <script>
+    function my$(id){
+      return document.getElementById(id);
+    }
+  </script>
+  <script>
+    //凡是css中这个属性是多个单词的写法，在js代码中DOM操作的时候，把-去掉，后面的单词的首字母大写即可
+
+    //点击按钮修改div的宽高背景颜色
+    my$("btn").onclick=function (){
+      my$("dv").style.width="400px";
+      my$("dv").style.height="200px";
+      my$("dv").style.backgroundColor="yellow";
+    };
+  </script>
+</body>
+</html>

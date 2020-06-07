@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <a href="">百度</a> -->
+  <input type="button" value="设置a的地址和内容" id="btn" />
+  <a href="https://www.baidu.com/" id="a1">百度</a>
+  <script>
+    //案例：点击按钮修改a标签的地址和热点文字
+
+
+    // //根据id获取按钮，注册点击事件，添加事件处理函数
+    // document.getElementById("btn").onclick=function (){
+    //   //根据id获取超链接，设置href属性
+    //   document.getElementById("a1").href="https://www.sohu.com/";
+    //   document.getElementById("a1").innerText="搜狐";
+    // };
+
+
+    //优化后的代码
+    //根据id获取按钮，注册点击事件，添加事件处理函数
+    document.getElementById("btn").onclick = function () {
+      //根据id获取超链接，设置href属性
+      var aObj = document.getElementById("a1");
+      aObj.href = "https://www.sohu.com/";
+      aObj.innerText = "搜狐";
+    };
+  </script>
+</body>
+
+</html>

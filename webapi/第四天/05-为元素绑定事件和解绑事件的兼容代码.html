@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="按钮" id="btn"/>
+  <input type="button" value="干掉第一个按钮的事件" id="btn2"/>
+  <script src="common.js"></script>
+  <script>
+
+    //绑定事件的兼容
+    function addEventListener(elenment, type, fn) {
+      if (elenment.addEventListener) {
+        elenment.addEventListener(type, fn, false)
+      } else if (elenment.attachEvent) {
+        elenment.attachEvent("on" + type, fn)
+      } else {
+        elenment["on"+type] = fn;
+      }
+    }
+
+
+    //解绑事件的兼容
+    //为任意的一个元素，解绑对应的事件
+    function removeEventListener(elenment, type, fnName) {
+      if (elenment.removeEventListener) {
+        elenment.removeEventListener(type, fnName, false)
+      } else if (elenment.detachEvent) {
+        elenment.detachEvent("on" + type, fnName)
+      } else {
+        elenment["on"+type] = null;
+      }
+    }
+
+    
+    function f1(){
+      console.log("第一个");
+    }
+    function f2(){
+      console.log("第二个");
+    }
+    addEventListener(my$("btn"),"click",f1);
+    addEventListener(my$("btn"),"click",f2);
+
+    my$("btn2").onclick=function (){
+      removeEventListener(my$("btn"),"click",f1);
+    };
+  </script>
+</body>
+
+</html>
